@@ -1,14 +1,14 @@
 package dev.martabernardo.imc_calculator.models;
 
 public class Person {
+    private Float weight;
 
     public Person(Float weight) {
-        //TODO Auto-generated constructor stub
+        this.weight = weight;
     }
 
     public Float getWeight() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getWeight'");
+        return weight;
     }
 
 }
