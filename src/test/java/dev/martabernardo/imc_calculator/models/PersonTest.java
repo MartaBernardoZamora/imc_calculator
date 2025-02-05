@@ -5,18 +5,30 @@ import org.junit.jupiter.api.Test;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
+
 public class PersonTest {
     @Test
     @DisplayName("Test getWeight method")
     void testGetWeight() {
         Float weight = (float) 70.5;
-        Person person = new Person(weight);
+        Person person = new Person(weight, null);
 
         Float result = person.getWeight();
 
         assertThat(result, is(weight));
 
-
     }
+    @Test
+    @DisplayName("Test getHeight method")
+    void testGetHeight() {
+        Float weight = (float) 70.5;
+        Float height = (float) 1.70;
+        Person person = new Person(weight, height);
+
+        Float result = person.getHeight();
+
+        assertThat(result, is(height));
+    }
+
 
 }
