@@ -4,26 +4,22 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 
-import java.util.Scanner;
-
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
+
+import java.util.Scanner;
 
 public class InitViewTest {
 
     @Test
     @DisplayName("Test print welcome message")
-    void testInitViewPrint() {
-        Scanner mockScanner = mock(Scanner.class);
-        when(mockScanner.nextFloat()).thenReturn((float)1.75, (float)70.5);
-        
-        InitView initView = new InitView(mockScanner);
+    void testInitViewPrint() {        
+        Scanner scanner = mock(Scanner.class);
+        when(scanner.nextFloat()).thenReturn(1.75f).thenReturn(70.0f);
+        InitView initView = new InitView(scanner);
         initView.printInitMessage();
-
-        Mockito.verify(mockScanner, Mockito.times(2)).nextFloat();
-
-
+        Mockito.verify(scanner, Mockito.times(2)).nextFloat();        
     }
     
 }
