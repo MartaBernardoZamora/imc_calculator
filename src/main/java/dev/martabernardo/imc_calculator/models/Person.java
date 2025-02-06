@@ -17,4 +17,9 @@ public class Person {
         return height;
     }
 
+    public Float calculateIMC() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'calculateIMC'");
+    }
+
 }
