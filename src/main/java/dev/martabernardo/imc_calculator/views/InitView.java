@@ -2,6 +2,8 @@ package dev.martabernardo.imc_calculator.views;
 
 import java.util.Scanner;
 
+import dev.martabernardo.imc_calculator.controllers.Controller;
+
     
 
 public class InitView {
@@ -19,5 +21,7 @@ public class InitView {
         System.out.println("Ingrese el peso en kg:");
         float peso = scanner.nextFloat(); 
         System.out.println("Ha ingresado una algura de " + altura + " metros y un peso de " + peso + " kg");
+        Controller controller = new Controller();
+        controller.requestIMC(altura, peso);
     }
 }

@@ -11,6 +11,10 @@ public class Controller {
         this.resultView = resultView;
     }
     
+    public Controller() {
+        this.resultView = new ResultView();
+    }
+
     public void requestIMC(Float height, Float weight) {
         Person person = new Person(weight, height);
         Float imc = person.calculateIMC();
