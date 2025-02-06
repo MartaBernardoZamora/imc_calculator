@@ -6,5 +6,4 @@ public class ResultView {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'printResultMessage'");
     }
-
 }

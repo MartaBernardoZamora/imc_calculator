@@ -1,5 +1,7 @@
 package dev.martabernardo.imc_calculator.views;
 
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
@@ -12,11 +14,11 @@ public class ResultViewTest {
     @DisplayName("Test print result message")
     void testResultViewPrint() {
         Float imc = 24.39f;
-        ResultView resultView = new ResultView();
+        ResultView spyResultView = spy(new ResultView());
         
-        resultView.printResultMessage(imc);
+        spyResultView.printResultMessage(imc);
 
-        verify(resultView, times(1)).printResultMessage(imc);
+        verify(spyResultView, times(1)).printResultMessage(imc);
     }
 
 }
