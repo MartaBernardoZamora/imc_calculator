@@ -1,9 +1,15 @@
 package dev.martabernardo.imc_calculator;
 
+import java.util.Scanner;
+
+import dev.martabernardo.imc_calculator.views.InitView;
+
 public final class App {
     private App() {
     }
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Scanner scanner = new Scanner(System.in);
+        InitView initView = new InitView(scanner);
+        initView.printInitMessage();
     }
 }
