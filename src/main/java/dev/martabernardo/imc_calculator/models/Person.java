@@ -18,8 +18,8 @@ public class Person {
     }
 
     public Float calculateIMC() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'calculateIMC'");
+        Float imc = weight / (height * height);
+        return Math.round(imc * (float) 100) / (float) 100;
     }
 
 }
