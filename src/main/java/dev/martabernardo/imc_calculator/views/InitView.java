@@ -17,9 +17,11 @@ public class InitView {
     public void printInitMessage() {
         System.out.println("Bienvenido a la calculadora de IMC");        
         System.out.println("Ingrese la altura en metros:");
-        float altura = scanner.nextFloat();        
+        String alturaStr = scanner.hasNext() ? scanner.next(): "0";
+        float altura = Float.parseFloat(alturaStr.replace(",", "."));         
         System.out.println("Ingrese el peso en kg:");
-        float peso = scanner.nextFloat(); 
+        String pesoStr = scanner.hasNext() ? scanner.next(): "0";
+        float peso = Float.parseFloat(pesoStr.replace(",", ".")); 
         System.out.println("Ha ingresado una algura de " + altura + " metros y un peso de " + peso + " kg");
         Controller controller = new Controller();
         controller.requestIMC(altura, peso);

@@ -16,10 +16,11 @@ public class InitViewTest {
     @DisplayName("Test print welcome message")
     void testInitViewPrint() {        
         Scanner scanner = mock(Scanner.class);
-        when(scanner.nextFloat()).thenReturn(1.75f).thenReturn(70.0f);
+        when(scanner.hasNext()).thenReturn(true);
+        when(scanner.next()).thenReturn("1.75").thenReturn("70.0");
         InitView initView = new InitView(scanner);
         initView.printInitMessage();
-        Mockito.verify(scanner, Mockito.times(2)).nextFloat();        
+        Mockito.verify(scanner, Mockito.times(2)).next();        
     }
     
 }

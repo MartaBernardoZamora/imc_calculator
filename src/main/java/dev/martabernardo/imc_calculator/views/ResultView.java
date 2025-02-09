@@ -12,7 +12,7 @@ public class ResultView {
         return "Obesidad mórbida";
     }
 
-    public void printResultMessage(Float imc) {
+    public void printResultMessage(float imc) {
         System.out.println("Su índice de masa corporal es: " + imc);
         System.out.println("Usted presenta: " + getIMCCategory(imc));
     }

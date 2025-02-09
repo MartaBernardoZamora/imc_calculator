@@ -11,5 +11,6 @@ public final class App {
         Scanner scanner = new Scanner(System.in);
         InitView initView = new InitView(scanner);
         initView.printInitMessage();
+        scanner.close();
     }
 }
