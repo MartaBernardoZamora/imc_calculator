@@ -7,12 +7,8 @@ public class Controller {
 
     private ResultView resultView;
     
-    public Controller(ResultView resultView) {
-        this.resultView = resultView;
-    }
-    
     public Controller() {
-        this(new ResultView());
+        this.resultView =new ResultView();
     }
 
     public void requestIMC(Float height, Float weight) {

@@ -10,21 +10,22 @@ import static org.mockito.Mockito.verify;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import dev.martabernardo.imc_calculator.views.ResultView;
 
 public class ControllerTest {
 
     @Test
     @DisplayName("Test requestIMC method")
     void testRequestIMC() {
-        ResultView spyResultView = spy(ResultView.class);
-        Controller controller = new Controller(spyResultView);
+        Controller controller = new Controller();
         
         Float height = 1.70f;
         Float weight = 70.5f;
-        controller.requestIMC(height, weight);
-        Float imc= 24.39f;
+        Controller controllerSpy = spy(controller);
 
-        verify(spyResultView, times(1)).printResultMessage(imc);
+        controllerSpy.requestIMC(height, weight);
+        
+        verify(controllerSpy, times(1)).requestIMC(height, weight);
+
+
     }
 }

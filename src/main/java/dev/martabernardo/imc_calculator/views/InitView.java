@@ -23,7 +23,7 @@ public class InitView {
         String pesoStr = scanner.hasNext() ? scanner.next(): "0";
         float peso = Float.parseFloat(pesoStr.replace(",", ".")); 
         System.out.println("Ha ingresado una algura de " + altura + " metros y un peso de " + peso + " kg");
-        Controller controller = new Controller(new ResultView());
+        Controller controller = new Controller();
         controller.requestIMC(altura, peso);
     }
 }
