@@ -1,7 +1,7 @@
 package dev.martabernardo.imc_calculator.views;
 
 public class ResultView {
-    private String getIMCCategory(float imc) {
+    public String getIMCCategory(float imc) {
         if (imc < 16) return "Delgadez severa";
         if (imc < 17) return "Delgadez moderada";
         if (imc < 18.5) return "Delgadez leve";
