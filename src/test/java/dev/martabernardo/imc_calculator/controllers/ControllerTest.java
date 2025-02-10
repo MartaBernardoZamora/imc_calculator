@@ -1,8 +1,5 @@
 package dev.martabernardo.imc_calculator.controllers;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
@@ -28,4 +25,5 @@ public class ControllerTest {
 
 
     }
+
 }

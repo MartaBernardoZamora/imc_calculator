@@ -6,8 +6,8 @@ import dev.martabernardo.imc_calculator.views.InitView;
 
 import static org.mockito.Mockito.mock;
 
-import java.io.ByteArrayInputStream;
-import java.nio.charset.StandardCharsets;
+/*import java.io.ByteArrayInputStream;
+import java.nio.charset.StandardCharsets;*/
 import java.util.Scanner;
 
 import org.junit.jupiter.api.DisplayName;
