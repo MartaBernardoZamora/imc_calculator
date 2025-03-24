@@ -11,7 +11,7 @@ public class PersonTest {
     @DisplayName("Test getWeight method")
     void testGetWeight() {
         String weight = "70.5";
-        Person person = new Person(weight);
+        Person person = new Person(weight, "1.70");
 
         assertThat(person.getWeight(), is(70.5));
     }
@@ -19,7 +19,7 @@ public class PersonTest {
     @DisplayName("Test getWeight method with ,")
     void testGetWeightWithComma() {
         String weight = "70,5";
-        Person person = new Person(weight);
+        Person person = new Person(weight, "1.70");
 
         assertThat(person.getWeight(), is(70.5));
     }
