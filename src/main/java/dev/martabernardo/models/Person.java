@@ -22,4 +22,8 @@ public class Person {
         return height;
     }
 
+    public Double calculateImc() {
+        Double imc = Math.round(weight / (height * height) * 100.0) / 100.0;
+        return imc;
+    }
 }
