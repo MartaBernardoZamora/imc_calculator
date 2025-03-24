@@ -23,4 +23,13 @@ public class PersonTest {
 
         assertThat(person.getWeight(), is(70.5));
     }
+    @Test
+    @DisplayName("Test getHeight method")
+    void testGetHeight() {
+        String weight = "70.5";
+        String height = "1.70";
+        Person person = new Person(weight, height);
+
+        assertThat(person.getHeight(), is(1.70));
+    }
 }
