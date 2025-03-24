@@ -1,0 +1,43 @@
+# Compilados de Java
+*.class
+
+# Archivos de logs
+*.log
+
+# Directorios de Maven
+target/
+
+# Configuración específica del IDE
+
+# IntelliJ
+.idea/
+*.iml
+*.iws
+out/
+
+# Eclipse
+.project
+.classpath
+.settings/
+bin/
+
+# NetBeans
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# Visual Studio Code
+.vscode/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Otros posibles
+*.jar
+*.war
+*.ear
+.mydocumentation/
