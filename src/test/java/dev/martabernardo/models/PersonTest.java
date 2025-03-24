@@ -32,4 +32,13 @@ public class PersonTest {
 
         assertThat(person.getHeight(), is(1.70));
     }
+    @Test
+    @DisplayName("Test calculateImc method")
+    void testCalculateImc() {
+        String weight = "70.5";
+        String height = "1.70";
+        Person person = new Person(weight, height);
+
+        assertThat(person.calculateImc(), is(24.39));
+    }
 }
