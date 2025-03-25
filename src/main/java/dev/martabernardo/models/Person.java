@@ -29,6 +29,7 @@ public class Person {
 
     public String getCategoryByImc() {
         Double imc = calculateImc();
+        if (imc < 16) return CategoryImc.DELGADEZ_SEVERA.getCategory();
         if (imc < 17) return CategoryImc.DELGADEZ_MODERADA.getCategory();
         if (imc < 18.5) return CategoryImc.DELGADEZ_LEVE.getCategory();
         if (imc < 25) return CategoryImc.NORMAL.getCategory();
