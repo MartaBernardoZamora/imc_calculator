@@ -24,5 +24,19 @@ public class PersonControllerTest {
 
         verify(calculatorView, times(1)).printResultMessage(24.39);
     }
+    @Test
+    @DisplayName("Test requestIMC method whith category")
+    void testRequestIMCWithCategory() {
+        
+        CalculatorView calculatorView = mock(CalculatorView.class);
+        PersonController personController = new PersonController(calculatorView);
+
+        String height = "1.70";
+        String weight = "70,50";    
+
+        personController.requestIMC(height, weight);
+
+        verify(calculatorView, times(1)).printResultMessage(24.39, "peso normal");
+    }
 
 }
