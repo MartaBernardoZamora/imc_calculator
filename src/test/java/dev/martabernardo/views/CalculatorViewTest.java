@@ -18,16 +18,20 @@ public class CalculatorViewTest {
     @Test
     @DisplayName("Test initMessage method")
     void testInitMessage() {
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+
         Scanner scanner = mock(Scanner.class);
-        PersonController controller = mock(PersonController.class);
-
-        CalculatorView calculatorView = new CalculatorView(scanner, controller);
-
         when(scanner.hasNext()).thenReturn(true, true);
         when(scanner.next()).thenReturn("1.70", "70.50");
- 
+
+        CalculatorView calculatorView = new CalculatorView(scanner);
         calculatorView.initMessage();
-        verify(controller).requestIMC("1.70", "70.50");
+
+        String output = outContent.toString();
+        assertTrue(output.contains("Ingrese la altura"));
+        assertTrue(output.contains("Ingrese el peso"));
+
     }
     @Test
     @DisplayName("Test printResultMessage method")
@@ -36,8 +40,7 @@ public class CalculatorViewTest {
         System.setOut(new PrintStream(outContent));
 
         Scanner scanner = mock(Scanner.class);
-        PersonController controller = mock(PersonController.class);
-        CalculatorView calculatorView = new CalculatorView(scanner, controller);
+        CalculatorView calculatorView = new CalculatorView(scanner);
 
         calculatorView.printResultMessage(24.39, "peso normal");
 

@@ -1,4 +1,4 @@
-package dev.martabernardo.controller;
+package dev.martabernardo.controllers;
 
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.mock;
@@ -7,6 +7,7 @@ import static org.mockito.Mockito.times;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import dev.martabernardo.controller.PersonController;
 import dev.martabernardo.views.CalculatorView;
 
 public class PersonControllerTest {

@@ -1,17 +1,17 @@
 package dev.martabernardo;
 
-/**
- * Hello world!
- */
+import java.util.Scanner;
+
+import dev.martabernardo.views.CalculatorView;
 public final class App {
     private App() {
     }
-
-    /**
-     * Says hello to the world.
-     * @param args The arguments of the program.
-     */
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        
+        Scanner scanner = new Scanner(System.in);
+
+        CalculatorView calculatorView = new CalculatorView(scanner);
+        calculatorView.initMessage();
+        scanner.close();
     }
 }
