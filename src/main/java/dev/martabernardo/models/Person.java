@@ -1,5 +1,7 @@
 package dev.martabernardo.models;
 
+import dev.martabernardo.models.CategoryImc;
+
 public class Person {
 
     private Double weight;
@@ -25,5 +27,10 @@ public class Person {
     public Double calculateImc() {
         Double imc = Math.round(weight / (height * height) * 100.0) / 100.0;
         return imc;
+    }
+
+    public String getCategoryByImc() {
+        Double imc = calculateImc();
+        return CategoryImc.NORMAL.getCategory();
     }
 }
