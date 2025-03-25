@@ -1,7 +1,5 @@
 package dev.martabernardo.models;
 
-import dev.martabernardo.models.CategoryImc;
-
 public class Person {
 
     private Double weight;
@@ -35,6 +33,8 @@ public class Person {
         if (imc < 25) return CategoryImc.NORMAL.getCategory();
         if (imc < 30) return CategoryImc.SOBREPESO.getCategory();
         if (imc < 35) return CategoryImc.OBESIDAD_LEVE.getCategory();
-        return CategoryImc.OBESIDAD_MODERADA.getCategory();
+        if (imc < 40) return CategoryImc.OBESIDAD_MODERADA.getCategory();
+
+        return CategoryImc.OBESIDAD_MORBIDA.getCategory();
     }
 }

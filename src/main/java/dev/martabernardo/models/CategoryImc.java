@@ -4,7 +4,8 @@ public enum CategoryImc {
     NORMAL("peso normal"),
     SOBREPESO("sobrepeso"),
     OBESIDAD_LEVE("obesidad leve"),
-    OBESIDAD_MODERADA("obesidad moderada");
+    OBESIDAD_MODERADA("obesidad moderada"),
+    OBESIDAD_MORBIDA("obesidad morbida");
     
     private String category;
     
