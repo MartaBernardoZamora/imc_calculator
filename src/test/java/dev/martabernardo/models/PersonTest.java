@@ -3,8 +3,12 @@ package dev.martabernardo.models;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
+import static org.mockito.Mockito.when;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
+import org.mockito.Mockito;
 
 public class PersonTest {
     @Test
@@ -40,5 +44,17 @@ public class PersonTest {
         Person person = new Person(weight, height);
 
         assertThat(person.calculateImc(), is(24.39));
+    }
+    @Test
+    @DisplayName("Test getCategoryByImc method")
+    void testGetCategoryByImc() {
+        Double imc= 19.00;
+
+        Person person = Mockito.mock(Person.class);
+        
+        when(person.calculateImc()).thenReturn(imc);
+        when(person.getCategoryByImc()).thenCallRealMethod();
+
+        assertThat(person.getCategoryByImc(), is("peso normal"));
     }
 }
