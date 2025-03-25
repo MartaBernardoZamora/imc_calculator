@@ -30,6 +30,7 @@ public class Person {
     public String getCategoryByImc() {
         Double imc = calculateImc();
 
+        if (imc < 18.5) return CategoryImc.DELGADEZ_LEVE.getCategory();
         if (imc < 25) return CategoryImc.NORMAL.getCategory();
         if (imc < 30) return CategoryImc.SOBREPESO.getCategory();
         if (imc < 35) return CategoryImc.OBESIDAD_LEVE.getCategory();

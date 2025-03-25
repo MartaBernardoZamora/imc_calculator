@@ -1,6 +1,7 @@
 package dev.martabernardo.models;
 
 public enum CategoryImc {
+    DELGADEZ_LEVE("delgadez leve"),
     NORMAL("peso normal"),
     SOBREPESO("sobrepeso"),
     OBESIDAD_LEVE("obesidad leve"),
