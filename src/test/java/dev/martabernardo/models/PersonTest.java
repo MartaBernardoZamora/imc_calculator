@@ -7,7 +7,6 @@ import static org.mockito.Mockito.when;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 import org.mockito.Mockito;
 
 public class PersonTest {
@@ -113,5 +112,16 @@ public class PersonTest {
         when(person.getCategoryByImc()).thenCallRealMethod();
 
         assertThat(person.getCategoryByImc(), is("delgadez leve"));
+    }
+    @Test
+    @DisplayName("Test getCategoryByImc method with delgadez moderada")
+    void testGetCategoryByImcWithDelgadezModerada() {
+        Double imc = 16.50;
+        Person person = Mockito.mock(Person.class);
+        
+        when(person.calculateImc()).thenReturn(imc);
+        when(person.getCategoryByImc()).thenCallRealMethod();
+
+        assertThat(person.getCategoryByImc(), is("delgadez moderada"));
     }
 }
