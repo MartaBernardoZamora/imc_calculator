@@ -33,6 +33,8 @@ public class Person {
         Double imc = calculateImc();
 
         if (imc < 25) return CategoryImc.NORMAL.getCategory();
-        return CategoryImc.SOBREPESO.getCategory();
+        if (imc < 30) return CategoryImc.SOBREPESO.getCategory();
+
+        return CategoryImc.OBESIDAD_LEVE.getCategory();
     }
 }
