@@ -26,4 +26,17 @@ public class Person {
         Double imc = Math.round(weight / (height * height) * 100.0) / 100.0;
         return imc;
     }
+
+    public String getCategoryByImc() {
+        Double imc = calculateImc();
+        if (imc < 16) return CategoryImc.DELGADEZ_SEVERA.getCategory();
+        if (imc < 17) return CategoryImc.DELGADEZ_MODERADA.getCategory();
+        if (imc < 18.5) return CategoryImc.DELGADEZ_LEVE.getCategory();
+        if (imc < 25) return CategoryImc.NORMAL.getCategory();
+        if (imc < 30) return CategoryImc.SOBREPESO.getCategory();
+        if (imc < 35) return CategoryImc.OBESIDAD_LEVE.getCategory();
+        if (imc < 40) return CategoryImc.OBESIDAD_MODERADA.getCategory();
+
+        return CategoryImc.OBESIDAD_MORBIDA.getCategory();
+    }
 }
