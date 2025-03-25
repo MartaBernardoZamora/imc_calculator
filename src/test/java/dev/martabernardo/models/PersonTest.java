@@ -69,4 +69,15 @@ public class PersonTest {
 
         assertThat(person.getCategoryByImc(), is("sobrepeso"));
     }
+    @Test
+    @DisplayName("Test getCategoryByImc method with obesidad leve")
+    void testGetCategoryByImcWithObesidadLeve() {
+        Double imc = 34.00;
+        Person person = Mockito.mock(Person.class);
+        
+        when(person.calculateImc()).thenReturn(imc);
+        when(person.getCategoryByImc()).thenCallRealMethod();
+
+        assertThat(person.getCategoryByImc(), is("obesidad leve"));
+    }
 }
