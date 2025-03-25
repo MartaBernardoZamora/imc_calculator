@@ -1,0 +1,30 @@
+package dev.martabernardo.views;
+
+import java.util.Scanner;
+
+import dev.martabernardo.controller.PersonController;
+
+public class CalculatorView {
+    private Scanner scanner;
+    private PersonController controller;
+
+    public CalculatorView(Scanner scanner) {
+        this.scanner = scanner;
+        this.controller = new PersonController(this);
+    }
+
+    public void initMessage() {
+        System.out.println("Bienvenido a la calculadora de IMC");        
+        System.out.println("Ingrese la altura en metros:");
+        String height = scanner.next();        
+        System.out.println("Ingrese el peso en kg:");
+        String weight = scanner.next();
+        System.out.println("Ha ingresado una algura de " + height + " metros y un peso de " + weight + " kg");
+        controller.requestIMC(height, weight);
+    }
+    public void printResultMessage(Double imc, String category) {
+        System.out.println("Su índice de masa corporal es: " + imc);
+        System.out.println("Usted presenta: " + category); 
+    }
+
+}
