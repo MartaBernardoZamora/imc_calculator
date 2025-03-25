@@ -8,9 +8,9 @@ public class CalculatorView {
     private Scanner scanner;
     private PersonController controller;
 
-    public CalculatorView(Scanner scanner, PersonController controller) {
+    public CalculatorView(Scanner scanner) {
         this.scanner = scanner;
-        this.controller = controller;
+        this.controller = new PersonController(this);
     }
 
     public void initMessage() {
