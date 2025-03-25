@@ -31,6 +31,8 @@ public class Person {
 
     public String getCategoryByImc() {
         Double imc = calculateImc();
-        return CategoryImc.NORMAL.getCategory();
+
+        if (imc < 25) return CategoryImc.NORMAL.getCategory();
+        return CategoryImc.SOBREPESO.getCategory();
     }
 }

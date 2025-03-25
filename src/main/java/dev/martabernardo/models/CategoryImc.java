@@ -1,7 +1,8 @@
 package dev.martabernardo.models;
 
 public enum CategoryImc {
-    NORMAL("peso normal");
+    NORMAL("peso normal"),
+    SOBREPESO("sobrepeso");
     
     private String category;
     
