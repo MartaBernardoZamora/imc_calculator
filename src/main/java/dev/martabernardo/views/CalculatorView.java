@@ -13,9 +13,6 @@ public class CalculatorView {
         this.controller = controller;
     }
 
-    public void printResultMessage(Double imc, String string) {
-    }
-
     public void initMessage() {
         System.out.println("Bienvenido a la calculadora de IMC");        
         System.out.println("Ingrese la altura en metros:");
@@ -24,6 +21,10 @@ public class CalculatorView {
         String weight = scanner.next();
         System.out.println("Ha ingresado una algura de " + height + " metros y un peso de " + weight + " kg");
         controller.requestIMC(height, weight);
+    }
+    public void printResultMessage(Double imc, String category) {
+        System.out.println("Su índice de masa corporal es: " + imc);
+        System.out.println("Usted presenta: " + category); 
     }
 
 }
