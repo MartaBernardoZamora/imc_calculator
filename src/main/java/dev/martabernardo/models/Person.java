@@ -34,7 +34,7 @@ public class Person {
 
         if (imc < 25) return CategoryImc.NORMAL.getCategory();
         if (imc < 30) return CategoryImc.SOBREPESO.getCategory();
-
-        return CategoryImc.OBESIDAD_LEVE.getCategory();
+        if (imc < 35) return CategoryImc.OBESIDAD_LEVE.getCategory();
+        return CategoryImc.OBESIDAD_MODERADA.getCategory();
     }
 }
