@@ -14,7 +14,8 @@ public class PersonController {
     public void requestIMC(String height, String weight) {
         Person person = new Person(weight, height);
         Double imc = person.calculateImc();
-        calculatorView.printResultMessage(imc);
+        String category = person.getCategoryByImc();
+        calculatorView.printResultMessage(imc, category);
 
     }
 

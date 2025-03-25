@@ -2,7 +2,7 @@ package dev.martabernardo.views;
 
 public class CalculatorView {
 
-    public void printResultMessage(Double imc) {
+    public void printResultMessage(Double imc, String string) {
     }
 
 }
